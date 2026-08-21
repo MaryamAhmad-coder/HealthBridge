@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthbridge-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: healthbridge
+  template:
+    metadata:
+      labels:
+        app: healthbridge
+    spec:
+      containers:
+        - name: web
+          image: your-registry/healthbridge:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: ADMIN_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: healthbridge-secrets
+                  key: ADMIN_TOKEN

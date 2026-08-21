@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HealthBridge</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<div id="app">
+    <header>
+        <h1>HealthBridge</h1>
+        <p>Find verified health information and local community resources.</p>
+    </header>
+
+    <main>
+        <section id="search-section" class="card">
+            <input id="search-input" placeholder="Search for health topics or resources" />
+            <button id="search-btn">Search</button>
+            <div id="ai-suggestion" class="note"></div>
+            <div id="results"></div>
+        </section>
+
+        <section id="admin-section" class="card">
+            <h2>Admin / Health Org</h2>
+            <button id="admin-login-btn">Admin Login</button>
+            <div id="admin-panel" style="display:none"></div>
+        </section>
+    </main>
+
+    <footer>
+        <small>Informational only — not medical advice.</small>
+    </footer>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

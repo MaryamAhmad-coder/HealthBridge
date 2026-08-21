@@ -1,5 +1,5 @@
 # HealthBridge
-HealthBridge is your go for validation on certain causes, symptoms, side effects, and treatment measures for diseases. 
+
 Simple informational site to search verified health resources and community support.
 
 Quick start (local):
@@ -19,6 +19,8 @@ npm install
 node src/db_init.js
 ```
 
+
+Notes:
 - The AI endpoint will proxy to OpenAI if `OPENAI_API_KEY` is set; otherwise it uses a safe local fallback.
 - Kubernetes manifests are in the `kubernetes/` folder; update image and secrets before applying.
 - Terraform contains a placeholder in `terraform/` for provisioning cloud resources.

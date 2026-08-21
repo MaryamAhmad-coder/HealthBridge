@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: healthbridge-service
+spec:
+  selector:
+    app: healthbridge
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP
